@@ -1,0 +1,42 @@
+jobs:
+  job_signed:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "- Cynthia Obiekezie -"
+
+  # job_submit:
+  #   runs-on: ubuntu-latest
+  #   needs: [job_signed]
+  #   steps:
+  #     - TSID=2240025
+  #     - run: echo $CI_COMMIT_BRANCH | grep "main"
+  #     - FORM_PAYLOAD="branch=$CI_COMMIT_BRANCH&sha=$CI_COMMIT_SHORT_SHA&url=$CI_REPOSITORY_URL&message=$CI_COMMIT_MESSAGE&author=$CI_COMMIT_AUTHOR"
+  #     - |
+  #         curl -H "Content-Type: application/x-www-form-urlencoded" -d "$FORM_PAYLOAD" -X POST "http://172.104.5.197/workbook/submit/$TSID"
+
+
+
+
+
+
+
+
+
+# stages:
+#     - signed
+#     - submit
+    
+
+# job_submit:
+#     stage: submit
+#     script:
+#         - TSID=2240025
+#         - echo $CI_COMMIT_BRANCH | grep "main"
+#         - FORM_PAYLOAD="branch=$CI_COMMIT_BRANCH&sha=$CI_COMMIT_SHORT_SHA&url=$CI_REPOSITORY_URL&message=$CI_COMMIT_MESSAGE&author=$CI_COMMIT_AUTHOR"
+#         - |
+#             curl -H "Content-Type: application/x-www-form-urlencoded" -d "$FORM_PAYLOAD" -X POST "http://172.104.5.197/workbook/submit/$TSID"
+
+# job_signed:
+#     stage: signed
+#     script: 
+#         - echo 'Cynthia Obiekezie'
